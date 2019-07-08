@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello world</title>
+  <script src="jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!--
+  <script src="history.js"></script>
+  <script>
+    chrome.history.search({text: '', maxResults: 10}, function(data) {
+      data.forEach(function(page) {
+        console.log(page.url);
+        $("debug").html(page.url);
+      });
+    });
+  </script>
+  -->
+</head>
+
+<body>
+  <script src="lib.js"></script>
+  <div class="container">
+    <img src="logo.png" width="80%" class="center">
+    <h4 align="center">Understand your mind by Google searches</h4>
+    <p>We do searches everyday. Can you imagine that the tech giants might understand you better thatn your close friends, or even yourself?</p>
+    <p>Know yourself better now, by your own search keywords.</p>
+    <!-- Send email is disabled in this release
+    <input id="cfgName" type="text" placeholder="Your Name"></input>
+    <input id="cfgEmail" type="text" placeholder="Friend's Email"></input>
+    <button>Update Settings</button>
+    -->
+  </div>
+  <div class="container">
+    <a href='./keywords.html' class="mybtn">Check</a>
+  </div>
+  <div class="container">
+    <input id="cfgEnable" type="checkbox">Enable extension</input>
+  </div>
+  <div id="debug"></div>
+</body/>
+</html>

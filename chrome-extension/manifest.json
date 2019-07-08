@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "MindBook",
+  "description": "Understand your mind by your own Google searches.",
+  "icons": {
+    "16": "icon/drawable-ldpi-icon.png",
+    "48": "icon/drawable-mdpi-icon.png",
+    "128": "icon/drawable-xxhdpi-icon.png"
+  },
+  "permissions": ["history", "storage", "tabs", "*://*.google.com/*"],
+  "browser_action": {
+    "default_icon": "icon/drawable-mdpi-icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*"],
+      "js": ["logdata.js"]
+    }
+  ],
+  "background": {
+    "page": "background.html"
+  }
+}
