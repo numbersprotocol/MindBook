@@ -731,6 +731,17 @@
                                     <action selector="addAppData:" target="XfG-lQ-9wD" id="msC-2m-bLr"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krm-Mp-SSy">
+                                <rect key="frame" x="133" y="161" width="215" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Turn on Safari App Extension" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UXD-hG-DMh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openSafariExtensionPrefereneces:" target="XfG-lQ-9wD" id="FGO-ah-W0J"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                 </viewController>

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SafariServices.SFSafariApplication
 
 class ViewController: NSViewController {
     
@@ -19,6 +20,15 @@ class ViewController: NSViewController {
     override var representedObject: Any? {
         didSet {
             // Update the view, if already loaded.
+        }
+    }
+    
+    @IBAction func openSafariExtensionPrefereneces(_ sender: NSButton) {
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: "io.dt42.MindBook.MindBook-Extension") { error in
+            if let _ = error {
+                // Insert code to inform the user that something went wrong.
+                NSLog("Error: \(String(describing: error))")
+            }
         }
     }
     
