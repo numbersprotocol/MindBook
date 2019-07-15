@@ -8,12 +8,28 @@
 
 import SafariServices
 
+let userDefaults = UserDefaults.standard
+
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
         // This method will be called when a content script provided by your extension calls safari.extension.dispatchMessage("message").
         page.getPropertiesWithCompletionHandler { properties in
             NSLog("The extension received a message (\(messageName)) from a script injected into (\(String(describing: properties?.url))) with userInfo (\(userInfo ?? [:]))")
+        }
+        
+        if messageName == "save", let data = userInfo {
+            NSLog("Saving \(data)")
+            data.forEach {(key, value) in
+                userDefaults.set(value, forKey: key)
+            }
+        } else if messageName == "load", let data = userInfo {
+            NSLog("Loading \(data)")
+            data.forEach {(key, _) in
+                let value = userDefaults.object(forKey: key)
+                NSLog("Loaded \(String(describing: value))")
+                page.dispatchMessageToScript(withName: "loaded", userInfo: [key: value as Any])
+            }
         }
     }
     
@@ -30,5 +46,5 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func popoverViewController() -> SFSafariExtensionViewController {
         return SafariExtensionViewController.shared
     }
-
+    
 }

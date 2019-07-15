@@ -15,5 +15,12 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         shared.preferredContentSize = NSSize(width:320, height:240)
         return shared
     }()
-
+    
+    @IBAction func addExtensionData(_ sender: NSButton) {
+        NSLog("add extension data called")
+    }
+    
+    @IBAction func logData(_ sender: NSButton) {
+        NSLog("log data called from extension")
+    }
 }
