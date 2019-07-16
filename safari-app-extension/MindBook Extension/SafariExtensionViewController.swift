@@ -16,11 +16,10 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         return shared
     }()
     
-    @IBAction func addExtensionData(_ sender: NSButton) {
-        NSLog("add extension data called")
-    }
-    
     @IBAction func logData(_ sender: NSButton) {
-        NSLog("log data called from extension")
+        let kwcounter = userDefaults?.integer(forKey: "kwcounter") ?? 0
+        for key in 0..<kwcounter {
+            NSLog("\(String(describing: userDefaults?.object(forKey: String(key))))")
+        }
     }
 }

@@ -187,9 +187,19 @@
 				TargetAttributes = {
 					5D85551B22DB5AE7000AFD01 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					5D85553222DB5B80000AFD01 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -406,6 +416,7 @@
 				CODE_SIGN_ENTITLEMENTS = MindBook/MindBook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2AQULZDDCL;
 				INFOPLIST_FILE = MindBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,6 +436,7 @@
 				CODE_SIGN_ENTITLEMENTS = MindBook/MindBook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2AQULZDDCL;
 				INFOPLIST_FILE = MindBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,6 +453,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MindBook Extension/MindBook_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AQULZDDCL;
 				INFOPLIST_FILE = "MindBook Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +472,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MindBook Extension/MindBook_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2AQULZDDCL;
 				INFOPLIST_FILE = "MindBook Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

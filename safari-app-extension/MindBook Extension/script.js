@@ -8,7 +8,7 @@ function saveKeyword(keyword) {
    * 2. save {kwcounter: {keyword: keyword, datatime: _now}} to storage.
    */
   if (keyword) {
-    safari.extension.dispatchMessage('save', { keyword: keyword, datetime: getCurrentDatetime() });
+    safari.extension.dispatchMessage('saveKeyword', { keyword: keyword, datetime: getCurrentDatetime() });
   }
 }
 
@@ -18,13 +18,4 @@ function getCurrentDatetime() {
   return (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
 }
 
-safari.self.addEventListener('message', event => {
-  console.log(event);
-  if (event.name === 'loaded') {
-    if (/* DEBUG: event.message.enabled */ true) {
-      saveKeyword(parseKeyword());
-    }
-  }
-})
-
-safari.extension.dispatchMessage('load', { enabled: null });
+saveKeyword(parseKeyword());

@@ -8,7 +8,7 @@
 
 import SafariServices
 
-let userDefaults = UserDefaults.standard
+let userDefaults = UserDefaults(suiteName: "2AQULZDDCL.mindbook")
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
@@ -18,18 +18,14 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             NSLog("The extension received a message (\(messageName)) from a script injected into (\(String(describing: properties?.url))) with userInfo (\(userInfo ?? [:]))")
         }
         
-        if messageName == "save", let data = userInfo {
+        if messageName == "saveKeyword", let data = userInfo {
             NSLog("Saving \(data)")
-            data.forEach {(key, value) in
-                userDefaults.set(value, forKey: key)
-            }
-        } else if messageName == "load", let data = userInfo {
-            NSLog("Loading \(data)")
-            data.forEach {(key, _) in
-                let value = userDefaults.object(forKey: key)
-                NSLog("Loaded \(String(describing: value))")
-                page.dispatchMessageToScript(withName: "loaded", userInfo: [key: value as Any])
-            }
+            let kwcounter = userDefaults?.integer(forKey: "kwcounter") ?? 0
+            userDefaults?.set([
+                "keyword": data["keyword"],
+                "datatime": data["datetime"]
+                ], forKey: String(kwcounter))
+            userDefaults?.set(kwcounter + 1, forKey: "kwcounter")
         }
     }
     
