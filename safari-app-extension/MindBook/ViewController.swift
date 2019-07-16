@@ -47,4 +47,8 @@ class ViewController: NSViewController {
         userDefaults?.synchronize()
         print(Array((userDefaults?.dictionaryRepresentation().keys)!).count)
     }
+    
+    @IBAction func dismissKeywordsView(_ sender: NSButton) {
+        self.dismiss(self)
+    }
 }
