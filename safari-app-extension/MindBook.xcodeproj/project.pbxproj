@@ -10,7 +10,6 @@
 		5D0A9B8222DDB215008DFA38 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9B8122DDB215008DFA38 /* logo.png */; };
 		5D0A9B8322DDB215008DFA38 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9B8122DDB215008DFA38 /* logo.png */; };
 		5D0A9B8522DDCA1C008DFA38 /* KeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9B8422DDCA1C008DFA38 /* KeywordViewController.swift */; };
-		5D0A9B8622DDCA1C008DFA38 /* KeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9B8422DDCA1C008DFA38 /* KeywordViewController.swift */; };
 		5D85552022DB5AE7000AFD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85551F22DB5AE7000AFD01 /* AppDelegate.swift */; };
 		5D85552222DB5AE7000AFD01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85552122DB5AE7000AFD01 /* ViewController.swift */; };
 		5D85552422DB5AE9000AFD01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D85552322DB5AE9000AFD01 /* Assets.xcassets */; };
@@ -112,12 +111,12 @@
 			children = (
 				5D85551F22DB5AE7000AFD01 /* AppDelegate.swift */,
 				5D85552122DB5AE7000AFD01 /* ViewController.swift */,
+				5D0A9B8422DDCA1C008DFA38 /* KeywordViewController.swift */,
 				5D85552322DB5AE9000AFD01 /* Assets.xcassets */,
 				5D85552522DB5AE9000AFD01 /* Main.storyboard */,
 				5D0A9B8122DDB215008DFA38 /* logo.png */,
 				5D85552822DB5AE9000AFD01 /* Info.plist */,
 				5D85552922DB5AE9000AFD01 /* MindBook.entitlements */,
-				5D0A9B8422DDCA1C008DFA38 /* KeywordViewController.swift */,
 			);
 			path = MindBook;
 			sourceTree = "<group>";
@@ -269,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D0A9B8622DDCA1C008DFA38 /* KeywordViewController.swift in Sources */,
 				5D85553B22DB5B80000AFD01 /* SafariExtensionViewController.swift in Sources */,
 				5D85553922DB5B80000AFD01 /* SafariExtensionHandler.swift in Sources */,
 			);

@@ -8,7 +8,8 @@
 
 import SafariServices
 
-let userDefaults = UserDefaults(suiteName: "2AQULZDDCL.mindbook")
+let groupName = "2AQULZDDCL.mindbook"
+let userDefaults = UserDefaults(suiteName: groupName)
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     

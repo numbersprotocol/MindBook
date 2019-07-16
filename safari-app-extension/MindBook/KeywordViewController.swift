@@ -13,9 +13,8 @@ class KeywordViewController: NSViewController {
 
     @IBOutlet weak var keywordTableView: NSTableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+    override func viewDidAppear() {
+        super.viewDidAppear()
         loadKeywordData()
     }
     
@@ -30,7 +29,7 @@ class KeywordViewController: NSViewController {
     }
     
     @IBAction func clearKeywordData(_ sender: NSButton) {
-        userDefaults?.removePersistentDomain(forName: "2AQULZDDCL.mindbook")
+        userDefaults?.removePersistentDomain(forName: groupName)
         userDefaults?.synchronize()
         keywordData = [:]
         keywordTableView.reloadData()
