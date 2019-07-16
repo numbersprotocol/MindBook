@@ -23,7 +23,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             let kwcounter = userDefaults?.integer(forKey: "kwcounter") ?? 0
             userDefaults?.set([
                 "keyword": data["keyword"],
-                "datatime": data["datetime"]
+                "datetime": data["datetime"]
                 ], forKey: String(kwcounter))
             userDefaults?.set(kwcounter + 1, forKey: "kwcounter")
         }
