@@ -12,6 +12,7 @@ import SafariServices.SFSafariApplication
 let userDefaults = UserDefaults(suiteName: "2AQULZDDCL.mindbook")
 
 class ViewController: NSViewController {
+    var keywordData: [Int:[String:Any]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +26,18 @@ class ViewController: NSViewController {
         }
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToKeywordView" {
+            loadKeywordData()
+        }
+    }
+    
     @IBAction func openSafariExtensionPrefereneces(_ sender: NSButton) {
         SFSafariApplication.showPreferencesForExtension(withIdentifier: "io.dt42.MindBook.MindBook-Extension") { error in
             if let _ = error {
                 // Insert code to inform the user that something went wrong.
                 NSLog("Error: \(String(describing: error))")
             }
-        }
-    }
-    
-    @IBAction func logData(_ sender: NSButton) {
-        let kwcounter = userDefaults?.integer(forKey: "kwcounter") ?? 0
-        for key in 0..<kwcounter {
-            NSLog("\(String(describing: userDefaults?.object(forKey: String(key))))")
         }
     }
     
@@ -50,5 +50,13 @@ class ViewController: NSViewController {
     
     @IBAction func dismissKeywordsView(_ sender: NSButton) {
         self.dismiss(self)
+    }
+    
+    func loadKeywordData() {
+        let kwcounter = userDefaults?.integer(forKey: "kwcounter") ?? 0
+        for key in 0..<kwcounter {
+            keywordData[key] = userDefaults?.dictionary(forKey: String(key))
+        }
+        NSLog("Loaded: \(keywordData)")
     }
 }

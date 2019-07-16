@@ -752,7 +752,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="9Qm-4K-98d" kind="sheet" id="rdr-EZ-FtR"/>
+                                            <segue destination="9Qm-4K-98d" kind="sheet" identifier="goToKeywordView" id="zKh-ay-3Lf"/>
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Krm-Mp-SSy">
