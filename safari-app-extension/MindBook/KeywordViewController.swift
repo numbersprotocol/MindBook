@@ -26,17 +26,33 @@ class KeywordViewController: NSViewController {
             keywordData[key] = userDefaults?.dictionary(forKey: String(key))
         }
         NSLog("Loaded: \(keywordData)")
+        keywordTableView.reloadData()
     }
     
     @IBAction func clearKeywordData(_ sender: NSButton) {
-        NSLog(String(describing: userDefaults?.dictionaryRepresentation().keys.count))
         userDefaults?.removePersistentDomain(forName: "2AQULZDDCL.mindbook")
         userDefaults?.synchronize()
-        NSLog(String(describing: userDefaults?.dictionaryRepresentation().keys.count))
         keywordData = [:]
+        keywordTableView.reloadData()
     }
     
     @IBAction func dismissKeywordsView(_ sender: NSButton) {
         self.dismiss(self)
+    }
+}
+
+extension KeywordViewController: NSTableViewDataSource, NSTableViewDelegate {
+
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return keywordData.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let item = keywordData[row]
+        guard let cell = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else {
+            return nil
+        }
+        cell.textField?.stringValue = item?[tableColumn!.identifier.rawValue] as! String
+        return cell
     }
 }
