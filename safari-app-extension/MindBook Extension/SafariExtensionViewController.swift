@@ -41,6 +41,27 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         keywordTableView.reloadData()
     }
     
+    func convertKeywordDataToCsvString() -> String {
+        var ret = ""
+        for key in 0..<keywordData.count {
+            ret += (keywordData[key]!["datetime"] as! String) + "," + (keywordData[key]!["keyword"] as! String) + "\n"
+        }
+        return ret
+    }
+    
+    @IBAction func saveKeywordDataToFile(_ sender: NSButton) {
+        let savePanel = NSSavePanel()
+        savePanel.allowedFileTypes = ["csv"]
+        savePanel.runModal()
+        
+        guard let saveUrl = savePanel.url else {return}
+        do {
+            try convertKeywordDataToCsvString().write(to: saveUrl, atomically: true, encoding: .utf8)
+        } catch {
+            NSLog("Error when saving CSV: \(error)")
+        }
+    }
+    
     @IBAction func clearKeywordData(_ sender: NSButton) {
         userDefaults?.removePersistentDomain(forName: groupName)
         userDefaults?.synchronize()

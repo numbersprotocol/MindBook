@@ -37,6 +37,9 @@
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="saveKeywordDataToFile:" target="-2" id="0RI-7n-GeG"/>
+                                    </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mzx-Ma-gfN">
                                     <rect key="frame" x="108" y="-7" width="72" height="32"/>
