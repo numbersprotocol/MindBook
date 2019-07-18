@@ -22,6 +22,8 @@ You can do this with any third party app that gives you this warning dialog and 
 1. Select the Extensions tab. This tab shows the localized description, display name, and version number for the selected Safari App Extension. It also provides a more nuanced message about the permissions claimed by the extension.
 1. Find your new extension in the list on the left, and enable it by selecting the checkbox.
 
+![enable-extension](./images/enable-extension.png)
+
 Your new extension is now enabled. You’ll see a new toolbar item (a button) in the Safari toolbar.
 
 ## Development
