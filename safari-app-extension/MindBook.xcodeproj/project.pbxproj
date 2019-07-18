@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D0A9B8222DDB215008DFA38 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9B8122DDB215008DFA38 /* logo.png */; };
-		5D0A9B8322DDB215008DFA38 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9B8122DDB215008DFA38 /* logo.png */; };
 		5D0A9B8522DDCA1C008DFA38 /* KeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9B8422DDCA1C008DFA38 /* KeywordViewController.swift */; };
 		5D85552022DB5AE7000AFD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85551F22DB5AE7000AFD01 /* AppDelegate.swift */; };
 		5D85552222DB5AE7000AFD01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85552122DB5AE7000AFD01 /* ViewController.swift */; };
@@ -19,8 +17,8 @@
 		5D85553B22DB5B80000AFD01 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85553A22DB5B80000AFD01 /* SafariExtensionViewController.swift */; };
 		5D85553E22DB5B80000AFD01 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D85553C22DB5B80000AFD01 /* SafariExtensionViewController.xib */; };
 		5D85554122DB5B80000AFD01 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 5D85554022DB5B80000AFD01 /* script.js */; };
-		5D85554322DB5B80000AFD01 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5D85554222DB5B80000AFD01 /* ToolbarItemIcon.pdf */; };
 		5D85554722DB5B80000AFD01 /* MindBook Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5D85553322DB5B80000AFD01 /* MindBook Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5DF5389022E03ABB00D922F8 /* ToolbarItemIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DF5388F22E03ABB00D922F8 /* ToolbarItemIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +46,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5D0A9B8122DDB215008DFA38 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		5D0A9B8422DDCA1C008DFA38 /* KeywordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordViewController.swift; sourceTree = "<group>"; };
 		5D85551C22DB5AE7000AFD01 /* MindBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D85551F22DB5AE7000AFD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +61,8 @@
 		5D85553D22DB5B80000AFD01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		5D85553F22DB5B80000AFD01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D85554022DB5B80000AFD01 /* script.js */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		5D85554222DB5B80000AFD01 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		5D85554422DB5B80000AFD01 /* MindBook_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindBook_Extension.entitlements; sourceTree = "<group>"; };
+		5DF5388F22E03ABB00D922F8 /* ToolbarItemIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarItemIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +111,6 @@
 				5D0A9B8422DDCA1C008DFA38 /* KeywordViewController.swift */,
 				5D85552322DB5AE9000AFD01 /* Assets.xcassets */,
 				5D85552522DB5AE9000AFD01 /* Main.storyboard */,
-				5D0A9B8122DDB215008DFA38 /* logo.png */,
 				5D85552822DB5AE9000AFD01 /* Info.plist */,
 				5D85552922DB5AE9000AFD01 /* MindBook.entitlements */,
 			);
@@ -132,12 +128,12 @@
 		5D85553722DB5B80000AFD01 /* MindBook Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5DF5388F22E03ABB00D922F8 /* ToolbarItemIcon.png */,
 				5D85553822DB5B80000AFD01 /* SafariExtensionHandler.swift */,
 				5D85553A22DB5B80000AFD01 /* SafariExtensionViewController.swift */,
 				5D85553C22DB5B80000AFD01 /* SafariExtensionViewController.xib */,
 				5D85553F22DB5B80000AFD01 /* Info.plist */,
 				5D85554022DB5B80000AFD01 /* script.js */,
-				5D85554222DB5B80000AFD01 /* ToolbarItemIcon.pdf */,
 				5D85554422DB5B80000AFD01 /* MindBook_Extension.entitlements */,
 			);
 			path = "MindBook Extension";
@@ -242,7 +238,6 @@
 			files = (
 				5D85552422DB5AE9000AFD01 /* Assets.xcassets in Resources */,
 				5D85552722DB5AE9000AFD01 /* Main.storyboard in Resources */,
-				5D0A9B8222DDB215008DFA38 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D0A9B8322DDB215008DFA38 /* logo.png in Resources */,
-				5D85554322DB5B80000AFD01 /* ToolbarItemIcon.pdf in Resources */,
+				5DF5389022E03ABB00D922F8 /* ToolbarItemIcon.png in Resources */,
 				5D85553E22DB5B80000AFD01 /* SafariExtensionViewController.xib in Resources */,
 				5D85554122DB5B80000AFD01 /* script.js in Resources */,
 			);
